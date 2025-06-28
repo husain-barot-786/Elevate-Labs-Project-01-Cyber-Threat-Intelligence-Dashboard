@@ -1,0 +1,22 @@
+{% extends "base_login.html" %}
+{% block content %}
+<div class="login-center-container">
+    <img src="{{ url_for('static', filename='images/phishlab_logo.png') }}" class="logo logo-login" alt="PhishLab Logo">
+    <h1 class="login-title">PhishLab</h1>
+    <h2 class="login-welcome">Welcome to PhishLab</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="POST" class="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required autofocus>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Sign in</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% set active_page = "educate" %}
+{% block title %}Educate | PhishLab{% endblock %}
+{% block content %}
+<h1 class="center-heading">Phishing Awareness & Education</h1>
+<div class="educate-content">
+    <p>
+        Phishing is a deceptive attempt by malicious actors to obtain sensitive information such as usernames, passwords, or financial details by pretending to be a trustworthy entity.
+        <strong>Effective awareness is the best defense against phishing attacks.</strong>
+        This section provides comprehensive education, practical tips, and real-world examples to help you stay vigilant and protect yourself and your organization.
+    </p>
+    <h2>How to Recognize Phishing Attempts</h2>
+    <ul>
+        <li><strong>Check the Sender:</strong> Always verify the sender's email address. Attackers often use addresses that are similar to—but not exactly the same as—legitimate ones.</li>
+        <li><strong>Look for Generic Greetings:</strong> Phishing emails often use terms like "Dear Customer" instead of your actual name.</li>
+        <li><strong>Examine Links Carefully:</strong> Hover over links to view the actual URL. Do not click on suspicious or unexpected links.</li>
+        <li><strong>Watch for Urgency:</strong> Be cautious of emails demanding immediate action, such as "Your account will be locked!"</li>
+        <li><strong>Check for Poor Grammar or Spelling:</strong> Many phishing messages contain unusual phrasing or obvious spelling mistakes.</li>
+        <li><strong>Unexpected Attachments:</strong> Do not open attachments you weren't expecting. They may contain malware.</li>
+    </ul>
+
+    <h2>Best Practices for Preventing Phishing</h2>
+    <ul>
+        <li><strong>Think Before You Click:</strong> Never click links or download files from unknown or unsolicited sources.</li>
+        <li><strong>Verify Requests for Sensitive Info:</strong> Legitimate organizations will never ask for passwords or financial information via email.</li>
+        <li><strong>Use Multi-Factor Authentication (MFA):</strong> Adding an extra layer of security can protect your accounts even if credentials are compromised.</li>
+        <li><strong>Keep Software Updated:</strong> Ensure your operating system, browsers, and antivirus software are up to date.</li>
+        <li><strong>Report Suspicious Emails:</strong> If you receive a suspicious email, report it to your IT or security team immediately. Do not forward the email to others.</li>
+    </ul>
+
+    <h2>Real-World Scenarios</h2>
+    <ul>
+        <li><strong>Fake Invoice Scam:</strong> You receive an invoice for a service you never used, with a link to "review your bill." Always verify requests with the sender via trusted channels.</li>
+        <li><strong>Account Verification:</strong> An email says your account will be suspended unless you verify your information. Go directly to the official website instead of clicking links in the email.</li>
+        <li><strong>Gift Card Fraud:</strong> A message from your "boss" asks you to buy gift cards urgently. Always confirm unusual requests via phone or in person.</li>
+    </ul>
+
+    <h2>What To Do If You Suspect a Phishing Attempt</h2>
+    <ol>
+        <li>Do not click any links or download attachments.</li>
+        <li>Do not reply to the sender.</li>
+        <li>Take a screenshot or make note of the email details.</li>
+        <li>Report the email to your IT or security team.</li>
+        <li>Delete the email from your inbox and deleted items.</li>
+    </ol>
+
+    <div class="educate-highlight">
+        <strong>Remember:</strong> <br>
+        Staying informed and vigilant is your strongest defense against phishing. When in doubt,
+        <span class="educate-highlight-ask">always ask your IT/security department</span> before taking action!
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SQLite database files (auto-generated)
+database.db
+database
+
+# Flask instance folder (if used for config/data)
+*.sqlite3
+
+# Logs
+*.log
+
+# Compiled files
+*.so
+*.pyd
+
+# Static asset cache & transpiled files
+*.sass-cache
+*.cache
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test / temp files
+*.tmp
+*.bak
+
+# Node modules (if any frontend build tools)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+coverage.xml
+.cache

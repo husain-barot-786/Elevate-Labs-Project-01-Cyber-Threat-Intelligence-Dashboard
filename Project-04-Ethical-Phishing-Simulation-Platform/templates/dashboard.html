@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% set active_page = "dashboard" %}
+{% block title %}Campaign Dashboard | PhishLab{% endblock %}
+{% block content %}
+    <h1 class="center-heading">Campaign Dashboard</h1>
+    <a href="{{ url_for('campaign_new') }}" class="btn">+ New Campaign</a>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Created</th>
+            <th>Status</th>
+            <th>Sent At</th>
+            <th>Actions</th>
+            <th>Delivery</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for campaign in campaigns %}
+            <tr>
+              <td>{{ campaign.name }}</td>
+              <td>{{ campaign.created_at }}</td>
+              <td>
+                {% if campaign.status == 'Sent' %}
+                  <span class="status-sent">Sent</span>
+                {% else %}
+                  <span class="status-not-sent">Not sent</span>
+                {% endif %}
+              </td>
+              <td>{{ campaign.sent_at }}</td>
+              <td>
+                <a href="{{ url_for('campaign_view', campaign_id=campaign.id) }}" class="btn-small">View</a>
+              </td>
+              <td style="text-align:center;">
+                {% if campaign.can_send %}
+                  <form method="POST" action="{{ url_for('campaign_send', campaign_id=campaign.id) }}" style="display:inline;">
+                    <button type="submit" class="btn-small btn-send">Send</button>
+                  </form>
+                {% else %}
+                  <span class="delivered-check" title="Delivered">&#10004;</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% else %}
+            <tr>
+              <td colspan="6" style="text-align:center;">No campaigns found.</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+{% endblock %}

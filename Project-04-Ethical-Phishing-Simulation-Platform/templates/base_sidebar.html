@@ -1,0 +1,13 @@
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <img src="{{ url_for('static', filename='images/phishlab_logo.png') }}" class="logo logo-sidebar" alt="PhishLab Logo">
+        <span class="app-name">PhishLab</span>
+    </div>
+    <nav class="sidebar-menu">
+        <a href="{{ url_for('dashboard') }}" class="{% if active_page == 'dashboard' %}active{% endif %}">Dashboard</a>
+        <a href="{{ url_for('campaign_new') }}" class="{% if active_page == 'campaign_new' %}active{% endif %}">New Campaign</a>
+        <a href="{{ url_for('analytics') }}" class="{% if active_page == 'analytics' %}active{% endif %}">Analytics</a>
+        <a href="{{ url_for('educate') }}" class="{% if active_page == 'educate' %}active{% endif %}">Education & Awareness</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+</aside>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Chat App (E2EE)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Secure Chat App (E2EE)</h2>
+    </div>
+    <div id="login">
+        <input type="text" id="username" placeholder="Enter your username">
+        <button onclick="register()">Join</button>
+    </div>
+    <div id="chat" style="display:none;">
+        <div class="chat-row">
+            <div class="chat-controls">
+                <select id="recipients"></select>
+                <span id="current-user"></span>
+                <button onclick="logout()">Logout</button>
+                <button id="group-create-btn" title="Create Group"><i class="bi bi-people-fill"></i></button>
+            </div>
+            <div id="user-list"></div>
+        </div>
+        <div id="messages"></div>
+        <div class="input-row">
+            <input type="text" id="messageInput" placeholder="Type your message..." onkeydown="if(event.key==='Enter')sendMessage();">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <div id="error-message"></div>
+    <div id="success-message"></div>
+    <div id="group-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h3>Create Group</h3>
+            <input type="text" id="group-name-input" placeholder="Group name">
+            <div id="group-users-list"></div>
+            <button id="create-group-btn">Create</button>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

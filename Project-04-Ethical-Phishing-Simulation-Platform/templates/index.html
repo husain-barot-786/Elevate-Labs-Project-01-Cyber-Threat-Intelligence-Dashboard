@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhishLab | Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="login-page no-scrollbar">
+    <div class="login-center-container landing-center-container">
+        <img src="{{ url_for('static', filename='images/phishlab_logo.png') }}" class="logo logo-landing" alt="PhishLab Logo">
+        <h1 class="login-title" style="color:#40c9ff;">Welcome to Ethical Phishing Simulation Platform</h1>
+        <p class="login-welcome">
+            This platform allows you to safely simulate phishing attacks for educational purposes.
+        </p>
+        <a href="{{ url_for('login') }}" class="admin-link" style="font-size:1.2rem;">Login as Admin</a>
+    </div>
+</body>
+</html>

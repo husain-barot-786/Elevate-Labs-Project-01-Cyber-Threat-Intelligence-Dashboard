@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}View Campaign | PhishLab{% endblock %}
+{% block content %}
+<h1 class="center-heading">View Campaign</h1>
+{% if campaign %}
+    <ul>
+        <li><strong>Name:</strong> {{ campaign.name }}</li>
+        <li><strong>Template:</strong> {{ campaign.template }}</li>
+        <li><strong>Recipients:</strong> {{ campaign.recipients }}</li>
+        <li><strong>Created At:</strong> {{ campaign.created_at }}</li>
+        <li><strong>Sent At:</strong> {{ campaign.sent_at or "Not sent" }}</li>
+    </ul>
+    {% if not campaign.sent_at %}
+    <form method="POST" action="{{ url_for('campaign_send', campaign_id=campaign.id) }}">
+        <button type="submit">Send Campaign</button>
+    </form>
+    {% endif %}
+    <a href="{{ url_for('dashboard') }}" class="btn">Back to Dashboard</a>
+{% else %}
+    <p>Campaign not found.</p>
+{% endif %}
+{% endblock %}

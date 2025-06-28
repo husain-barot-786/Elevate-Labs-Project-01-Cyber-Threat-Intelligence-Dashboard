@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Emails Sent for Campaign: {{ campaign.name }}</h2>
+  <p>Total emails sent: {{ count }}</p>
+  <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}

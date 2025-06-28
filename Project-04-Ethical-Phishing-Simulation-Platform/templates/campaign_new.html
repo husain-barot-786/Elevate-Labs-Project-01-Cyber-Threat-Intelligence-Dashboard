@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% set active_page = "campaign_new" %}
+{% block title %}New Campaign | PhishLab{% endblock %}
+{% block content %}
+<h1 class="center-heading">Create New Campaign</h1>
+{% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+<form method="POST" class="campaign-form">
+    <label for="name">Campaign Name</label>
+    <input type="text" id="name" name="name" required autocomplete="off" spellcheck="false">
+
+    <label for="template">Phishing Template</label>
+    <select id="template" name="template" required>
+        <option value="">-- Select Template --</option>
+        {% for file in template_files %}
+            <option value="{{ file }}">{{ file }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="recipients">Recipients (comma-separated emails)</label>
+    <textarea id="recipients" name="recipients" rows="4" required autocomplete="off" spellcheck="false"></textarea>
+
+    <button type="submit" class="btn">Create Campaign</button>
+</form>
+{% endblock %}
