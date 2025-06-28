@@ -62,12 +62,13 @@ Secure-Chat-App-with-End-to-End-Encryption/
 ## Quick Start
 
 1. Clone the Repository
-    ```sh
-    git clone https://github.com/husain-barot-786/Elevate-Labs-Project-01-Cyber-Threat-Intelligence-Dashboard/Project-03-Secure-Chat-App-with-End-to-End-Encryption.git
+    bash
+    ```
+    git clone https://github.com/husain-barot-786/Elevate-Labs-Project-01-Cyber-Threat-Intelligence-Dashboard.git
     cd Project-03-Secure-Chat-App-with-End-to-End-Encryption
     ```
 
-2. Create and Activate a Virtual Environment
+3. Create and Activate a Virtual Environment
     - Windows:
         bash
         ```
@@ -81,20 +82,20 @@ Secure-Chat-App-with-End-to-End-Encryption/
         source venv/bin/activate
         ```
 
-3. Install Dependencies
+4. Install Dependencies
     bash
     ```
     pip install -r requirements.txt
     ```
 
-4. Run the Application
+5. Run the Application
     bash
     ```
     python -m app.main
     ```
     The server will start on `http://localhost:5000/`
 
-5. Open the App
+6. Open the App
     - In your browser, go to: [http://localhost:5000/](http://localhost:5000/)
 
 ---
