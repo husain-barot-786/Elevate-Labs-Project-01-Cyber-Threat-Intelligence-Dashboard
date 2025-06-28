@@ -55,7 +55,7 @@ Cyber-Threat-Intelligence-Dashboard
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/husain-barot-786/Elevate-Labs-Project-01-Cyber-Threat-Intelligence-Dashboard/edit/main/Project-01-Cyber-Threat-Intelligence-Dashboard/README.md
+   git clone https://github.com/husain-barot-786/Elevate-Labs-Project-01-Cyber-Threat-Intelligence-Dashboard.git
    cd Elevate-Labs-Project-01-Cyber-Threat-Intelligence-Dashboard
    ```
 
