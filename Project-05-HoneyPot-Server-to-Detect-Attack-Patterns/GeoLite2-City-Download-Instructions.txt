@@ -1,0 +1,83 @@
+# Step-by-Step Guide: Downloading GeoLite2-City.mmdb for the First Time
+
+The **GeoLite2-City.mmdb** file is a free IP geolocation database from [MaxMind](https://www.maxmind.com/).  
+You need it to geolocate attacker IPs in your honeypot project.
+
+---
+
+## 1. Create a MaxMind Account
+
+1. Go to: [https://www.maxmind.com/en/geolite2/signup](https://www.maxmind.com/en/geolite2/signup)
+2. Fill out the form with your details (name, email, password, etc.).
+3. Verify your email address (check your inbox for a verification email and click the link).
+
+---
+
+## 2. Get a License Key
+
+1. Log in to your account: [https://www.maxmind.com/en/account/login](https://www.maxmind.com/en/account/login)
+2. Go to **"My License Keys"**: [https://www.maxmind.com/en/accounts/current/license-key](https://www.maxmind.com/en/accounts/current/license-key)
+3. Click **"Generate New License Key"**.
+4. Give it a name (e.g., `cowrie-analysis`) and choose "No" for "Will this key be used for GeoIP Update?" unless you want to automate downloads.
+5. Click **"Confirm"**.
+6. Copy the generated license key (you’ll need it for direct downloads).
+
+---
+
+## 3. Download the GeoLite2-City Database
+
+There are **two main ways**:
+
+### A. Download via Web Browser
+
+1. Go to: [https://www.maxmind.com/en/accounts/937059/geoip/downloads](https://www.maxmind.com/en/accounts/937059/geoip/downloads)
+2. Scroll to "**GeoLite City**".
+3. Click on "**Download GZIP**" (you may be prompted to log in).
+4. A file called `GeoLite2-City.mmdb.tar.gz` will be downloaded.
+
+**Extract the MMDB File:**
+
+```bash
+cd ~/cowrie-analysis    # Or the directory you want to place the DB in
+# Move the downloaded file here (if needed)
+tar -xvzf /path/to/GeoLite2-City.mmdb.tar.gz
+# The mmdb file will be inside a directory, e.g., GeoLite2-City_YYYYMMDD/GeoLite2-City.mmdb
+cp GeoLite2-City_*/GeoLite2-City.mmdb .
+rm -rf GeoLite2-City_*
+```
+
+---
+
+### B. Download via Command Line (using your license key)
+
+**Replace YOUR_LICENSE_KEY below with your actual license key!**
+
+```bash
+cd ~/cowrie-analysis
+wget "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=YOUR_LICENSE_KEY&suffix=tar.gz" -O GeoLite2-City.mmdb.tar.gz
+tar -xvzf GeoLite2-City.mmdb.tar.gz
+cp GeoLite2-City_*/GeoLite2-City.mmdb .
+rm -rf GeoLite2-City_*
+rm GeoLite2-City.mmdb.tar.gz
+```
+
+---
+
+## 4. Confirm Success
+
+You should now have:
+```
+~/cowrie-analysis/GeoLite2-City.mmdb
+```
+This file should be **~60MB** in size.
+
+---
+
+## 5. Troubleshooting
+
+- If download fails, check you are logged in or using the correct license key.
+- If `.mmdb` file isn't found, check the extracted folder for the correct path.
+
+---
+
+**You are now ready to use GeoLite2-City.mmdb in your project analysis scripts!**

