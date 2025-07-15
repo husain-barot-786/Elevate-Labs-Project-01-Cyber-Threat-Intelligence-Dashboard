@@ -76,35 +76,40 @@ Ethical-Phishing-Simulation-Platform/
 ## Quick Start
 
 1. **Clone the Repository**
-    ```sh
-    git clone https://github.com/husain-barot-786/Elevate-Labs-Project-01-Cyber-Threat-Intelligence-Dashboard/Project-04-Ethical-Phishing-Simulation-Platform.git
+    bash
+    ```
+    git clone https://github.com/husain-barot-786/Elevate-Labs-Project-01-Cyber-Threat-Intelligence-Dashboard.git
     cd Project-04-Ethical-Phishing-Simulation-Platform
     ```
 
 2. **Create and Activate a Virtual Environment**
     - Windows:
-        ```sh
+        bash
+        ```
         python -m venv venv
         venv\Scripts\activate
         ```
     - macOS/Linux:
-        ```sh
+        bash
+        ```
         python3 -m venv venv
         source venv/bin/activate
         ```
 
 3. **Install Dependencies**
-    ```sh
+    bash
+    ```
     pip install -r requirements.txt
     ```
 
-4. **Run the Application**
-    ```sh
+5. **Run the Application**
+    bash
+    ```
     python app.py
     ```
     The server will start on `http://localhost:5000/`.
 
-5. **Open the App**
+6. **Open the App**
     - In your browser, go to: [http://localhost:5000/](http://localhost:5000/)
     - Sign in infor - Username: Admin | Password: Admin123    (Refer app.py)
 
