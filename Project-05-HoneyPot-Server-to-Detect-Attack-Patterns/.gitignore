@@ -1,7 +1,5 @@
-# Cowrie runtime files and logs
-cowrie/cowrie-env/
-cowrie/var/
-cowrie/etc/userdb.txt
+# Ignore the entire Cowrie folder
+cowrie/
 
 # Cowrie-analysis python venv and generated files
 cowrie-analysis/venv/
@@ -22,9 +20,9 @@ cowrie-analysis/GeoLite2-City_*/
 .DS_Store
 Thumbs.db
 
-# Misc: Python bytecode
+# Python bytecode
 *.pyc
 
-# Ignore backup or temp files just in case
+# Backup or temp files
 *.bak
 *.tmp
